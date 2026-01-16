@@ -22,6 +22,9 @@
           <a href="#security">Anti-bypass</a>
           <a href="#design">Design</a>
           <a href="#stack">Stack</a>
+          <a href="#endpoints">Endpoints</a>
+          <a href="#data">Data</a>
+          <a href="#ops">Ops</a>
         </div>
         <button class="primary-btn">Start Now</button>
       </nav>
@@ -206,6 +209,81 @@
           <div class="stack-card">
             <h3>Observability</h3>
             <p>Basic analytics dashboard for checkpoint drop-off tracking.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="endpoints" class="section alt">
+        <div class="section-header">
+          <h2>Endpoint blueprint</h2>
+          <p>Define the minimum API surface to keep keys secure and auditable.</p>
+        </div>
+        <div class="endpoint-grid">
+          <div class="endpoint-card">
+            <h3>Session</h3>
+            <ul>
+              <li>POST /api/session/start</li>
+              <li>GET /api/session/status</li>
+              <li>POST /api/session/refresh</li>
+            </ul>
+          </div>
+          <div class="endpoint-card">
+            <h3>Checkpoints</h3>
+            <ul>
+              <li>POST /api/checkpoint/complete</li>
+              <li>GET /api/checkpoint/next</li>
+              <li>POST /api/checkpoint/verify</li>
+            </ul>
+          </div>
+          <div class="endpoint-card">
+            <h3>Keys</h3>
+            <ul>
+              <li>GET /api/key</li>
+              <li>POST /api/key/validate</li>
+              <li>POST /api/key/revoke</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="data" class="section">
+        <div class="section-header">
+          <h2>Data model essentials</h2>
+          <p>Keep the schema compact while tracking checkpoint proof and key states.</p>
+        </div>
+        <div class="data-grid">
+          <div class="data-card">
+            <h3>Session</h3>
+            <p>id, fingerprint, status, progress, created_at, expires_at</p>
+          </div>
+          <div class="data-card">
+            <h3>Checkpoint</h3>
+            <p>index, provider, proof_token, completed_at, redeemed_by</p>
+          </div>
+          <div class="data-card">
+            <h3>Key</h3>
+            <p>value, session_id, issued_at, expires_at, redeemed_at</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="ops" class="section alt">
+        <div class="section-header">
+          <h2>Operations &amp; analytics</h2>
+          <p>Monitor provider performance and respond to abuse quickly.</p>
+        </div>
+        <div class="ops-grid">
+          <div class="ops-card">
+            <h3>Completion funnel</h3>
+            <p>Track drop-off by checkpoint and provider to tune flows.</p>
+          </div>
+          <div class="ops-card">
+            <h3>Abuse signals</h3>
+            <p>Alert on spikes in sessions, failed proofs, or rapid key attempts.</p>
+          </div>
+          <div class="ops-card">
+            <h3>Provider rotation</h3>
+            <p>Switch ads/shortlinks quickly when fill rates or CPMs drop.</p>
           </div>
         </div>
       </section>
