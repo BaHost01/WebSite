@@ -49,32 +49,41 @@
       <section class="section">
         <div class="section-header">
           <h2>Flow stages</h2>
-          <p>Each stage should return a signed proof so clients cannot skip ahead.</p>
+          <p>Each stage returns a signed proof so clients cannot skip ahead.</p>
         </div>
-        <div class="content-grid">
-          <div class="content-card">
-            <h3>1. Landing</h3>
-            <p>Explain checkpoint count, expected time, and why ads are required.</p>
-            <ul>
-              <li>Show progress indicator</li>
-              <li>Require session start before continue</li>
-            </ul>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-step">01</div>
+            <div>
+              <h3>Landing</h3>
+              <p>Explain checkpoint count, expected time, and why ads are required.</p>
+              <ul>
+                <li>Show progress indicator</li>
+                <li>Require session start before continue</li>
+              </ul>
+            </div>
           </div>
-          <div class="content-card">
-            <h3>2. Checkpoints</h3>
-            <p>Rotate ad/shortlink/captcha providers for resilience.</p>
-            <ul>
-              <li>Proof token per checkpoint</li>
-              <li>Server-side validation only</li>
-            </ul>
+          <div class="timeline-item">
+            <div class="timeline-step">02</div>
+            <div>
+              <h3>Checkpoints</h3>
+              <p>Rotate ad/shortlink/captcha providers for resilience.</p>
+              <ul>
+                <li>Proof token per checkpoint</li>
+                <li>Server-side validation only</li>
+              </ul>
+            </div>
           </div>
-          <div class="content-card">
-            <h3>3. Key reveal</h3>
-            <p>Issue the key with expiration and show a copy button.</p>
-            <ul>
-              <li>Cooldown per fingerprint</li>
-              <li>Key validation endpoint</li>
-            </ul>
+          <div class="timeline-item">
+            <div class="timeline-step">03</div>
+            <div>
+              <h3>Key reveal</h3>
+              <p>Issue the key with expiration and show a copy button.</p>
+              <ul>
+                <li>Cooldown per fingerprint</li>
+                <li>Key validation endpoint</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

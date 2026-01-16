@@ -336,6 +336,61 @@ a {
   font-size: 0.9rem;
 }
 
+.timeline {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--surface-light);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.timeline-step {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(75, 227, 255, 0.15);
+  color: var(--accent);
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+.checkpoint-stack {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.checkpoint-item {
+  background: var(--surface-light);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.checkpoint-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.badge {
+  background: rgba(124, 92, 255, 0.2);
+  color: #c9b7ff;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
 .code-block {
   background: #0a0f1c;
   border: 1px solid var(--border);

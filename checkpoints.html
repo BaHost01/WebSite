@@ -48,25 +48,34 @@
           <h2>Checkpoint plan</h2>
           <p>Each checkpoint issues a one-time proof token with a short expiration.</p>
         </div>
-        <div class="content-grid">
-          <div class="content-card">
-            <h3>Checkpoint 1</h3>
+        <div class="checkpoint-stack">
+          <div class="checkpoint-item">
+            <div class="checkpoint-header">
+              <h3>Checkpoint 1</h3>
+              <span class="badge">Shortlink</span>
+            </div>
             <ul>
               <li>Primary: shortlink or lightweight ad</li>
               <li>Proof token TTL: 2 minutes</li>
               <li>Fallback: captcha</li>
             </ul>
           </div>
-          <div class="content-card">
-            <h3>Checkpoint 2</h3>
+          <div class="checkpoint-item">
+            <div class="checkpoint-header">
+              <h3>Checkpoint 2</h3>
+              <span class="badge">Ad view</span>
+            </div>
             <ul>
               <li>Primary: ad view or offerwall</li>
               <li>Detect adblock and swap providers</li>
               <li>Track completion rate per provider</li>
             </ul>
           </div>
-          <div class="content-card">
-            <h3>Checkpoint 3</h3>
+          <div class="checkpoint-item">
+            <div class="checkpoint-header">
+              <h3>Checkpoint 3</h3>
+              <span class="badge">Captcha</span>
+            </div>
             <ul>
               <li>Primary: captcha challenge</li>
               <li>Cooldown enforced server-side</li>

@@ -53,8 +53,9 @@
             <h3>Session</h3>
             <ul>
               <li>POST /api/session/start</li>
-              <li>GET /api/session/status</li>
+              <li>GET /api/session/status?sessionId=</li>
               <li>POST /api/session/refresh</li>
+              <li>GET /api/config</li>
             </ul>
           </div>
           <div class="content-card">
@@ -71,6 +72,7 @@
               <li>GET /api/key</li>
               <li>POST /api/key/validate</li>
               <li>POST /api/key/revoke</li>
+              <li>GET /api/health</li>
             </ul>
           </div>
         </div>
@@ -99,6 +101,37 @@
   "nextUrl": "/checkpoint/3",
   "expiresIn": 120
 }</code></pre>
+          </div>
+          <div class="code-card">
+            <h3>POST /api/key/validate</h3>
+            <pre class="code-block"><code>{
+  "key": "KEY-ABC123"
+}</code></pre>
+          </div>
+          <div class="code-card">
+            <h3>Response</h3>
+            <pre class="code-block"><code>{
+  "ok": true,
+  "valid": true,
+  "key": "KEY-ABC123"
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Node.js starter</h2>
+          <p>Run the demo API locally to test the endpoint flow.</p>
+        </div>
+        <div class="code-grid">
+          <div class="code-card">
+            <h3>Start the server</h3>
+            <pre class="code-block"><code>node server.js</code></pre>
+          </div>
+          <div class="code-card">
+            <h3>Quick test</h3>
+            <pre class="code-block"><code>curl http://localhost:3000/api/key</code></pre>
           </div>
         </div>
       </section>
