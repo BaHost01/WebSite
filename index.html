@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseKeys - Roblox Executor Key System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <div class="logo">PulseKeys</div>
+        <div class="nav-links">
+          <a href="flow.html">Flow</a>
+          <a href="checkpoints.html">Checkpoints</a>
+          <a href="security.html">Anti-bypass</a>
+          <a href="design.html">Design</a>
+          <a href="stack.html">Stack</a>
+          <a href="endpoints.html">Endpoints</a>
+          <a href="data.html">Data</a>
+          <a href="ops.html">Ops</a>
+        </div>
+        <button class="primary-btn">Start Now</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <span class="eyebrow">Roblox Executor Key System</span>
+          <h1>Plan a fast, secure key flow with up to 3 checkpoints.</h1>
+          <p>
+            PulseKeys is a planning blueprint for a Roblox executor key system. The flow balances
+            monetization, security, and a smooth user experience across desktop and mobile.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-btn">Launch Planning</button>
+            <button class="secondary-btn">View Flow</button>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <strong>3</strong>
+              <span>Max checkpoints</span>
+            </div>
+            <div>
+              <strong>60s</strong>
+              <span>Avg. completion</span>
+            </div>
+            <div>
+              <strong>99%</strong>
+              <span>Token validation</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="panel-header">
+            <span>Live Flow Preview</span>
+            <span class="status-dot">Active</span>
+          </div>
+          <div class="panel-body">
+            <div class="panel-step">
+              <span>01</span>
+              <div>
+                <h4>Session start</h4>
+                <p>Server creates a signed session token.</p>
+              </div>
+            </div>
+            <div class="panel-step">
+              <span>02</span>
+              <div>
+                <h4>Checkpoint sequence</h4>
+                <p>Shortlink + captcha tokens per checkpoint.</p>
+              </div>
+            </div>
+            <div class="panel-step">
+              <span>03</span>
+              <div>
+                <h4>Key reveal</h4>
+                <p>Key issued with cooldown + expiration.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <button class="ghost-btn">Open endpoint spec</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="flow" class="section">
+        <div class="section-header">
+          <h2>End-to-end flow</h2>
+          <p>Guide users from landing to key reveal with clarity and speed.</p>
+        </div>
+        <div class="flow-grid">
+          <div class="flow-card">
+            <h3>Landing &amp; start</h3>
+            <p>Explain why checkpoints exist and set expectations on time and steps.</p>
+          </div>
+          <div class="flow-card">
+            <h3>Checkpoint 1-3</h3>
+            <p>Mix ads, shortlinks, and captchas. Store proof tokens server-side.</p>
+          </div>
+          <div class="flow-card">
+            <h3>Key reveal</h3>
+            <p>Provide copy button, countdown timer, and usage instructions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="checkpoints" class="section alt">
+        <div class="section-header">
+          <h2>Checkpoint strategy</h2>
+          <p>Rotate providers while keeping completion friction low.</p>
+        </div>
+        <div class="checkpoint-grid">
+          <div class="checkpoint-card">
+            <h3>Checkpoint 1</h3>
+            <ul>
+              <li>Shortlink provider A</li>
+              <li>Optional captcha</li>
+              <li>Token TTL: 2 minutes</li>
+            </ul>
+          </div>
+          <div class="checkpoint-card">
+            <h3>Checkpoint 2</h3>
+            <ul>
+              <li>Ad view or offerwall</li>
+              <li>Adblock fallback path</li>
+              <li>Server-side validation</li>
+            </ul>
+          </div>
+          <div class="checkpoint-card">
+            <h3>Checkpoint 3</h3>
+            <ul>
+              <li>Captcha challenge</li>
+              <li>Cooldown enforcement</li>
+              <li>One-time proof token</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="security" class="section">
+        <div class="section-header">
+          <h2>Anti-bypass plan</h2>
+          <p>Protect keys from replay, spoofing, and automated completion.</p>
+        </div>
+        <div class="security-list">
+          <article>
+            <h3>Session binding</h3>
+            <p>Every request requires a server-issued session token and fingerprint match.</p>
+          </article>
+          <article>
+            <h3>Signed checkpoint proofs</h3>
+            <p>Use HMAC/JWT tokens with short TTL and one-time redemption.</p>
+          </article>
+          <article>
+            <h3>Rate limits &amp; cooldowns</h3>
+            <p>Enforce IP + fingerprint throttles and key request cooldown windows.</p>
+          </article>
+          <article>
+            <h3>Adblock fallback</h3>
+            <p>If ad scripts are blocked, reroute to captcha or alternate provider.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="design" class="section alt">
+        <div class="section-header">
+          <h2>Website design direction</h2>
+          <p>Deliver a Roblox-inspired interface that is clean, responsive, and confident.</p>
+        </div>
+        <div class="design-grid">
+          <div class="design-card">
+            <h3>Visual style</h3>
+            <p>Dark theme, neon accents, and smooth gradients for a premium feel.</p>
+          </div>
+          <div class="design-card">
+            <h3>Layout</h3>
+            <p>Single-column with progress bar, large CTAs, and clear spacing.</p>
+          </div>
+          <div class="design-card">
+            <h3>Key reveal</h3>
+            <p>Big monospace key display, copy button, and support links.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="section">
+        <div class="section-header">
+          <h2>Suggested stack</h2>
+          <p>Keep it fast: simple frontend, minimal backend, strong validation.</p>
+        </div>
+        <div class="stack-grid">
+          <div class="stack-card">
+            <h3>Frontend</h3>
+            <p>HTML + CSS + JS with a lightweight build step if needed.</p>
+          </div>
+          <div class="stack-card">
+            <h3>Backend</h3>
+            <p>Node.js or Go API with Redis for sessions + rate limits.</p>
+          </div>
+          <div class="stack-card">
+            <h3>Observability</h3>
+            <p>Basic analytics dashboard for checkpoint drop-off tracking.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="endpoints" class="section alt">
+        <div class="section-header">
+          <h2>Endpoint blueprint</h2>
+          <p>Define the minimum API surface to keep keys secure and auditable.</p>
+        </div>
+        <div class="endpoint-grid">
+          <div class="endpoint-card">
+            <h3>Session</h3>
+            <ul>
+              <li>POST /api/session/start</li>
+              <li>GET /api/session/status</li>
+              <li>POST /api/session/refresh</li>
+            </ul>
+          </div>
+          <div class="endpoint-card">
+            <h3>Checkpoints</h3>
+            <ul>
+              <li>POST /api/checkpoint/complete</li>
+              <li>GET /api/checkpoint/next</li>
+              <li>POST /api/checkpoint/verify</li>
+            </ul>
+          </div>
+          <div class="endpoint-card">
+            <h3>Keys</h3>
+            <ul>
+              <li>GET /api/key</li>
+              <li>POST /api/key/validate</li>
+              <li>POST /api/key/revoke</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="data" class="section">
+        <div class="section-header">
+          <h2>Data model essentials</h2>
+          <p>Keep the schema compact while tracking checkpoint proof and key states.</p>
+        </div>
+        <div class="data-grid">
+          <div class="data-card">
+            <h3>Session</h3>
+            <p>id, fingerprint, status, progress, created_at, expires_at</p>
+          </div>
+          <div class="data-card">
+            <h3>Checkpoint</h3>
+            <p>index, provider, proof_token, completed_at, redeemed_by</p>
+          </div>
+          <div class="data-card">
+            <h3>Key</h3>
+            <p>value, session_id, issued_at, expires_at, redeemed_at</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="ops" class="section alt">
+        <div class="section-header">
+          <h2>Operations &amp; analytics</h2>
+          <p>Monitor provider performance and respond to abuse quickly.</p>
+        </div>
+        <div class="ops-grid">
+          <div class="ops-card">
+            <h3>Completion funnel</h3>
+            <p>Track drop-off by checkpoint and provider to tune flows.</p>
+          </div>
+          <div class="ops-card">
+            <h3>Abuse signals</h3>
+            <p>Alert on spikes in sessions, failed proofs, or rapid key attempts.</p>
+          </div>
+          <div class="ops-card">
+            <h3>Provider rotation</h3>
+            <p>Switch ads/shortlinks quickly when fill rates or CPMs drop.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <div class="logo">PulseKeys</div>
+        <p>Blueprint for a Roblox executor key system flow.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Support</a>
+      </div>
+    </footer>
+  </body>
+</html>
