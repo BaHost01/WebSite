@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseKeys Flow - Roblox Executor Key System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="index.html">PulseKeys</a>
+        <div class="nav-links">
+          <a href="flow.html">Flow</a>
+          <a href="checkpoints.html">Checkpoints</a>
+          <a href="security.html">Anti-bypass</a>
+          <a href="design.html">Design</a>
+          <a href="stack.html">Stack</a>
+          <a href="endpoints.html">Endpoints</a>
+          <a href="data.html">Data</a>
+          <a href="ops.html">Ops</a>
+        </div>
+        <a class="primary-btn" href="index.html">Back to home</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <span class="eyebrow">Flow Planning</span>
+          <h1>End-to-end key system journey</h1>
+          <p>
+            Map out every step from landing to key reveal so users understand expectations and
+            your backend can enforce the same sequence.
+          </p>
+        </div>
+        <div class="page-hero-card">
+          <h3>Target completion time</h3>
+          <p>45-90 seconds depending on checkpoint count and providers.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Flow stages</h2>
+          <p>Each stage should return a signed proof so clients cannot skip ahead.</p>
+        </div>
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>1. Landing</h3>
+            <p>Explain checkpoint count, expected time, and why ads are required.</p>
+            <ul>
+              <li>Show progress indicator</li>
+              <li>Require session start before continue</li>
+            </ul>
+          </div>
+          <div class="content-card">
+            <h3>2. Checkpoints</h3>
+            <p>Rotate ad/shortlink/captcha providers for resilience.</p>
+            <ul>
+              <li>Proof token per checkpoint</li>
+              <li>Server-side validation only</li>
+            </ul>
+          </div>
+          <div class="content-card">
+            <h3>3. Key reveal</h3>
+            <p>Issue the key with expiration and show a copy button.</p>
+            <ul>
+              <li>Cooldown per fingerprint</li>
+              <li>Key validation endpoint</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="section-header">
+          <h2>UX checkpoints</h2>
+          <p>Keep users informed so they do not churn mid-flow.</p>
+        </div>
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>Status messaging</h3>
+            <p>Show real-time status for ad load, verification, and next steps.</p>
+          </div>
+          <div class="content-card">
+            <h3>Fallback paths</h3>
+            <p>Offer captcha fallback if ads fail to render or load.</p>
+          </div>
+          <div class="content-card">
+            <h3>Support CTA</h3>
+            <p>Provide a quick link to support if a checkpoint fails.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <div class="logo">PulseKeys</div>
+        <p>Blueprint for a Roblox executor key system flow.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Support</a>
+      </div>
+    </footer>
+  </body>
+</html>

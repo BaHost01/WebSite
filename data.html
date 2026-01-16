@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseKeys Data Model - Roblox Executor Key System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="index.html">PulseKeys</a>
+        <div class="nav-links">
+          <a href="flow.html">Flow</a>
+          <a href="checkpoints.html">Checkpoints</a>
+          <a href="security.html">Anti-bypass</a>
+          <a href="design.html">Design</a>
+          <a href="stack.html">Stack</a>
+          <a href="endpoints.html">Endpoints</a>
+          <a href="data.html">Data</a>
+          <a href="ops.html">Ops</a>
+        </div>
+        <a class="primary-btn" href="index.html">Back to home</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <span class="eyebrow">Data Model</span>
+          <h1>Keep the schema compact and traceable</h1>
+          <p>Track session progress, proofs, and keys while staying audit-ready.</p>
+        </div>
+        <div class="page-hero-card">
+          <h3>Storage note</h3>
+          <p>Redis for active sessions, SQL for long-term logs.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Entity overview</h2>
+          <p>Use a minimal table set to keep reads fast.</p>
+        </div>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Entity</th>
+                <th>Key fields</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Session</td>
+                <td>id, fingerprint, status, progress, expires_at</td>
+                <td>Track user progress and validity.</td>
+              </tr>
+              <tr>
+                <td>Checkpoint</td>
+                <td>index, provider, proof_token, completed_at</td>
+                <td>Validate proof per checkpoint.</td>
+              </tr>
+              <tr>
+                <td>Key</td>
+                <td>value, session_id, issued_at, expires_at</td>
+                <td>Store key issuance and revocation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="section-header">
+          <h2>Indexes &amp; retention</h2>
+          <p>Ensure quick lookups and a clear retention plan.</p>
+        </div>
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>Indexes</h3>
+            <p>Index sessionId and fingerprint for rapid checks.</p>
+          </div>
+          <div class="content-card">
+            <h3>Retention</h3>
+            <p>Expire session logs after 7-14 days, keep key logs for 30+.</p>
+          </div>
+          <div class="content-card">
+            <h3>Audit trails</h3>
+            <p>Store proof validation failures for abuse reviews.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <div class="logo">PulseKeys</div>
+        <p>Blueprint for a Roblox executor key system flow.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Support</a>
+      </div>
+    </footer>
+  </body>
+</html>

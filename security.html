@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseKeys Security - Roblox Executor Key System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="index.html">PulseKeys</a>
+        <div class="nav-links">
+          <a href="flow.html">Flow</a>
+          <a href="checkpoints.html">Checkpoints</a>
+          <a href="security.html">Anti-bypass</a>
+          <a href="design.html">Design</a>
+          <a href="stack.html">Stack</a>
+          <a href="endpoints.html">Endpoints</a>
+          <a href="data.html">Data</a>
+          <a href="ops.html">Ops</a>
+        </div>
+        <a class="primary-btn" href="index.html">Back to home</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <span class="eyebrow">Anti-bypass</span>
+          <h1>Protect sessions, checkpoints, and keys</h1>
+          <p>Layer defenses to prevent replay attacks, automation, and token tampering.</p>
+        </div>
+        <div class="page-hero-card">
+          <h3>Core principle</h3>
+          <p>Trust server-side proofs, never client-side progress.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Defense layers</h2>
+          <p>Stack multiple controls so bypass attempts fail at each step.</p>
+        </div>
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>Session binding</h3>
+            <p>Bind sessions to fingerprint + IP hash. Rotate tokens every 10 minutes.</p>
+          </div>
+          <div class="content-card">
+            <h3>Signed proofs</h3>
+            <p>Use HMAC/JWT tokens with nonce + short TTL, redeem once.</p>
+          </div>
+          <div class="content-card">
+            <h3>Rate limits</h3>
+            <p>Throttle by IP, fingerprint, and device to stop rapid retries.</p>
+          </div>
+          <div class="content-card">
+            <h3>Captcha fallback</h3>
+            <p>Trigger captcha on adblock detection or suspicious behavior.</p>
+          </div>
+          <div class="content-card">
+            <h3>Key expiration</h3>
+            <p>Keys expire quickly and require validation on executor startup.</p>
+          </div>
+          <div class="content-card">
+            <h3>Audit logs</h3>
+            <p>Track failed proof validations and session anomalies.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="section-header">
+          <h2>Alerting checklist</h2>
+          <p>Get notified when traffic or failures spike.</p>
+        </div>
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>Failed proofs</h3>
+            <p>Alert if proof validation errors exceed baseline.</p>
+          </div>
+          <div class="content-card">
+            <h3>Session spikes</h3>
+            <p>Alert on sudden session creation surges.</p>
+          </div>
+          <div class="content-card">
+            <h3>Key retries</h3>
+            <p>Flag excessive key requests per fingerprint.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <div class="logo">PulseKeys</div>
+        <p>Blueprint for a Roblox executor key system flow.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Support</a>
+      </div>
+    </footer>
+  </body>
+</html>
